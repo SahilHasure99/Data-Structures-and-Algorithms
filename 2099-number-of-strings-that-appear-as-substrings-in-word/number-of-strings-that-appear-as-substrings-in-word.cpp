@@ -1,15 +1,14 @@
 class Solution {
 public:
     int numOfStrings(vector<string>& patterns, string word) {
-        int cnt = 0;
+        int count = 0;
 
-        for (string &p : patterns) {
-
-            if (word.find(p) != string::npos) {
-                cnt++;
+        for(int i = 0; i < patterns.size(); i++) {
+            if(word.find(patterns[i]) != string::npos) {
+                count++;
             }
         }
 
-        return cnt;
+        return count;
     }
 };
